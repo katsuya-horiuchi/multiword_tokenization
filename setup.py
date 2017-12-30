@@ -26,7 +26,7 @@ setup(
     author_email='katsuya.horiuchi.biz@gmail.com',
     url='https://github.com/katsuya-horiuchi/multiword_tokenization',
     keywords=['NLP', 'tokenization'],
-    license='Apache Software Licence',
+    license='Apache Software License',
     classifiers=[
         'Development Status :: 3 - Alpha',
         'License :: OSI Approved :: Apache Software License',
