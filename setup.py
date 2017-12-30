@@ -1,6 +1,6 @@
-from distutils.core import setup
 import os
 import re
+from setuptools import setup
 
 
 def get_version():
