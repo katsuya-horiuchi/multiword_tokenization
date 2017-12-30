@@ -1,7 +1,6 @@
 # Multi-word Tokenization
 
 ## NOTE
-* THE MODULE IS NOT AVAILABLE ON PyPI YET.
 * THE MODULE IS IN ALPHA VERSION.
 
 ## Background
