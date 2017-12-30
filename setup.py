@@ -13,7 +13,7 @@ def get_version():
         for line in lines:
             match = re_version.match(line)
             if match:
-                return line
+                return match.group(1)
     raise ValueError('Version information not found.')
 
 
