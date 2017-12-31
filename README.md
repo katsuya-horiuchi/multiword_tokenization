@@ -15,19 +15,17 @@ pip install multiword_tokenization
 ```
 
 * Before using the module, you need to prepare a list of multi-words to extract. If you have csv file splitted by newline character, you can feed them to the instance.
-
-```python
-from multiword_tokenization import MultiWordTokenizer
-
-keywords = ['New York', 'San Francisco', 'New Orleans']
-mword_tokenizer = MultiWordTokenizer(keywords)
-```
-
 * For user's convenience, the class will allow user to specify Python function to tokenize input text. You can use your favorite tokenizer. In the example below, `nltk` package is used.
 
 ```python
+from multiword_tokenization import MultiWordTokenizer
 from nltk.tokenize import word_tokenize
 
+keywords = ['New York', 'San Francisco', 'New Orleans']
+mword_tokenizer = MultiWordTokenizer(word_tokenize, keywords)
+```
+* Then, all you have to do is to call `extract` method:
+```python
 text = 'A Python event was held in New York.'
 tokenized = mword_tokenizer.extract(word_tokenize, text)
 
