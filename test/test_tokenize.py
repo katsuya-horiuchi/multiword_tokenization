@@ -19,13 +19,13 @@ class TestMultiWordTokenizer(unittest.TestCase):
 
     def test_tokenize1(self):
         self.assertEqual(
-            self.instance.extract('A Python event was held in New York.'),
+            self.instance.tokenize('A Python event was held in New York.'),
             ['A', 'Python', 'event', 'was', 'held', 'in', 'New York', '.']
         )
 
     def test_tokenize2(self):
         self.assertEqual(
-            self.instance.extract(
+            self.instance.tokenize(
                 ('Python programming language is an awesome language, '
                  'created by Guido van Rossum.')
             ),

@@ -13,7 +13,7 @@ Usage
 >>> keywords = ['New York', 'San Francisco', 'New Orleans']
 >>> text = 'A Python event was held in New York.'
 >>> mword_tokenize = MultiWordTokenizer(word_tokenize, keywords)
->>> mword_tokenize.extract(text)
+>>> mword_tokenize.tokenize(text)
 ['A', 'Python', 'event', 'was', 'held', 'in', 'New York', '.']
 -------------------------------------------------------------------------------
 """

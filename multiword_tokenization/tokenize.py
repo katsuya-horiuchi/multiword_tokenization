@@ -25,7 +25,7 @@ class MultiWordTokenizer:
     >>> keywords = ['New York', 'San Francisco', 'New Orleans']
     >>> text = 'A Python event was held in New York.'
     >>> mword_tokenize = MultiWordTokenizer(word_tokenize, keywords)
-    >>> mword_tokenize.extract(text)
+    >>> mword_tokenize.tokenize(text)
     ['A', 'Python', 'event', 'was', 'held', 'in', 'New York', '.']
     ---------------------------------------------------------------------------
     """
@@ -42,11 +42,11 @@ class MultiWordTokenizer:
         self.entities = entities
         self._space = re.compile(r'\s')
 
-    def extract(self, text):
+    def tokenize(self, text):
         """Tokenize text while extracting keywords
 
         Arg:
-            text: str; Text from which the method extracts keywords
+            text: str; Input text
         Return:
             list; Tokenized text with keywords grouped as one element
         """
@@ -120,20 +120,3 @@ class MultiWordTokenizer:
                 if len(spaces) + 1 > n_iteration:
                     n_iteration = len(spaces) + 1
         return n_iteration
-
-
-def test():
-    from nltk.tokenize import word_tokenize
-    keywords = ['Python programming language',
-                'Guido van Rossum',
-                'Python Software Foundation']
-    text = ('Python programming language is an awesome language, '
-            'created by Guido van Rossum.')
-    inst = MultiWordTokenizer(word_tokenize, keywords)
-    tokenized = ['Python programming language', 'is', 'an', 'awesome',
-                 'language', ',', 'created', 'by', 'Guido van Rossum', '.']
-    assert tokenized == inst.extract(text)
-
-
-if __name__ == '__main__':
-    test()

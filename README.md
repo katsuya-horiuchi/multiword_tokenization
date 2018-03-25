@@ -1,7 +1,7 @@
 # Multi-word Tokenization
 
 ## NOTE
-* THE MODULE IS IN ALPHA VERSION.
+* THE MODULE IS IN ALPHA VERSION, SOME FUNCTIONS AREN'T BACKWORD COMPATIBLE.
 
 ## Background
 One of the things NLP suffers from, at least in English, is that tokenizing function has a hard time extracting multi-words, such as "New York", from input text.<br>
@@ -27,7 +27,7 @@ mword_tokenizer = MultiWordTokenizer(word_tokenize, keywords)
 * Then, all you have to do is to call `extract` method:
 ```python
 text = 'A Python event was held in New York.'
-tokenized = mword_tokenizer.extract(word_tokenize, text)
+tokenized = mword_tokenizer.tokenize(word_tokenize, text)
 
 print(tokenized)
 >>> ['A', 'Python', 'event', 'was', 'held', 'in', 'New York', '.']
