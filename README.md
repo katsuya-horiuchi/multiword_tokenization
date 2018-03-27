@@ -24,7 +24,7 @@ from nltk.tokenize import word_tokenize
 keywords = ['New York', 'San Francisco', 'New Orleans']
 mword_tokenizer = MultiWordTokenizer(word_tokenize, keywords)
 ```
-* Then, all you have to do is to call `extract` method:
+* Then, all you have to do is to call `tokenize` method:
 ```python
 text = 'A Python event was held in New York.'
 tokenized = mword_tokenizer.tokenize(word_tokenize, text)
