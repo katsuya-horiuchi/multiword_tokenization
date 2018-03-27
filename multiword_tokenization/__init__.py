@@ -21,4 +21,4 @@ Usage
 from multiword_tokenization.tokenize import MultiWordTokenizer
 
 __all__ = ['MultiWordTokenizer']
-__version__ = '0.1.0a2'
+__version__ = '0.2.0a1'
